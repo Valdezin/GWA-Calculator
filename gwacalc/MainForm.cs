@@ -18,7 +18,7 @@ namespace gwacalc
             dynamic post = null;
             try
             {
-                client.BaseAddress = new Uri("https://api.vldz.tk/subjects/subjects");
+                client.BaseAddress = new Uri("https://cdngate.api.vldz.tk/subjects/subjects");
                 response = await client.GetAsync(client.BaseAddress);
                 result = await response.Content.ReadAsStringAsync();
                 post = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
